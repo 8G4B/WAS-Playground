@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: xml-module
+
+server:
+  port: 8083
