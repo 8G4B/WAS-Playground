@@ -1,13 +1,13 @@
-package com.github._g4b.Springboot_Project_Template;
+package com._8g4b;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootProjectTemplateApplication {
+public class WASPlaygroundCoreApplication {
 
     static void main(String[] args) {
-        SpringApplication.run(SpringbootProjectTemplateApplication.class, args);
+        SpringApplication.run(WASPlaygroundCoreApplication.class, args);
     }
 
 }

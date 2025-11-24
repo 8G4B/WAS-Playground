@@ -1,12 +1,12 @@
 plugins {
     java
-    id("org.springframework.boot") version "4.0.0-RC2"
+    id("org.springframework.boot") version "4.0.0"
     id("io.spring.dependency-management") version "1.1.7"
-    id("com.diffplug.spotless") version "8.0.0"
+    id("com.diffplug.spotless") version "8.1.0"
 }
-val springCloudVersion by extra("2025.1.0-M4")
+val springCloudVersion by extra("2025.1.0-RC1")
 
-group = "com.github.8g4b"
+group = "com.8g4b"
 version = "1.0"
 
 spotless {
