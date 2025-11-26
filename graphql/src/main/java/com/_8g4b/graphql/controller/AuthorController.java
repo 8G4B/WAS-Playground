@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 
 import com._8g4b.graphql.entity.Author;
 import com._8g4b.graphql.repository.AuthorRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @Controller
@@ -29,10 +30,7 @@ public class AuthorController {
 
     @MutationMapping
     public Author createAuthor(@Argument CreateAuthorInput input) {
-        Author author = Author.builder()
-                .name(input.name())
-                .email(input.email())
-                .build();
+        Author author = Author.builder().name(input.name()).email(input.email()).build();
         return authorRepository.save(author);
     }
 

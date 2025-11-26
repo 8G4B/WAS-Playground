@@ -11,6 +11,7 @@ import com._8g4b.graphql.entity.Author;
 import com._8g4b.graphql.entity.Book;
 import com._8g4b.graphql.repository.AuthorRepository;
 import com._8g4b.graphql.repository.BookRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @Controller
@@ -35,11 +36,7 @@ public class BookController {
         Author author = authorRepository.findById(input.authorId())
                 .orElseThrow(() -> new RuntimeException("Author not found"));
 
-        Book book = Book.builder()
-                .title(input.title())
-                .isbn(input.isbn())
-                .pageCount(input.pageCount())
-                .author(author)
+        Book book = Book.builder().title(input.title()).isbn(input.isbn()).pageCount(input.pageCount()).author(author)
                 .build();
 
         return bookRepository.save(book);
